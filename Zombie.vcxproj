@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{287E6E28-371E-4CCB-A051-6032B8379371}</ProjectGuid>
+    <RootNamespace>Zombie</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExtensionsToDeleteOnClean>*.cdf;*.cache;*.obj;*.obj.enc;*.ilk;*.ipdb;*.iobj;*.resources;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.tlog;*.manifest;*.res;*.pch;*.exp;*.idb;*.rep;*.xdc;*.pdb;*_manifest.rc;*.bsc;*.sbr;*.xml;*.metagen;*.bi;*.dll</ExtensionsToDeleteOnClean>
+    <OutDir>$(SolutionDir)bin_$(Platform)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin_$(Platform)_$(Configuration)\intermediate\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ExtensionsToDeleteOnClean>*.cdf;*.cache;*.obj;*.obj.enc;*.ilk;*.ipdb;*.iobj;*.resources;*.tlb;*.tli;*.tlh;*.tmp;*.rsp;*.pgc;*.pgd;*.meta;*.tlog;*.manifest;*.res;*.pch;*.exp;*.idb;*.rep;*.xdc;*.pdb;*_manifest.rc;*.bsc;*.sbr;*.xml;*.metagen;*.bi;*.dll</ExtensionsToDeleteOnClean>
+    <OutDir>$(SolutionDir)bin_$(Platform)_$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin_$(Platform)_$(Configuration)\intermediate\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>GLOG_NO_ABBREVIATED_SEVERITIES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\cpp\Zombie\3rdparty\SDL2_ttf-2.0.15\include;D:\cpp\Zombie\3rdparty\SDL2_mixer-2.0.4\include;D:\cpp\Zombie\3rdparty\SDL2_image-2.0.1\include;D:\cpp\Zombie\3rdparty\easyloggingpp;D:\cpp\Zombie\3rdparty\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>D:\cpp\Zombie\3rdparty\SDL2_ttf-2.0.15\lib\x64;D:\cpp\Zombie\3rdparty\SDL2_mixer-2.0.4\lib\x64;D:\cpp\Zombie\3rdparty\SDL2_image-2.0.1\lib\x64;D:\cpp\Zombie\3rdparty\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)3rdparty\*.dll" "$(TargetDir)" /D /K /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\cpp\Zombie\3rdparty\SDL2_ttf-2.0.15\include;D:\cpp\Zombie\3rdparty\SDL2_mixer-2.0.4\include;D:\cpp\Zombie\3rdparty\SDL2_image-2.0.1\include;D:\cpp\Zombie\3rdparty\easyloggingpp;D:\cpp\Zombie\3rdparty\SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>D:\cpp\Zombie\3rdparty\SDL2_ttf-2.0.15\lib\x64;D:\cpp\Zombie\3rdparty\SDL2_mixer-2.0.4\lib\x64;D:\cpp\Zombie\3rdparty\SDL2_image-2.0.1\lib\x64;D:\cpp\Zombie\3rdparty\SDL2\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>XCOPY "$(SolutionDir)3rdparty\*.dll" "$(TargetDir)" /D /K /Y</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="3rdparty\easyloggingpp\easylogging++.cc" />
+    <ClCompile Include="src\AssetManager.cpp" />
+    <ClCompile Include="src\Audio.cpp" />
+    <ClCompile Include="src\Display.cpp" />
+    <ClCompile Include="src\ECS\Component.cpp" />
+    <ClCompile Include="src\ECS\Entity.cpp" />
+    <ClCompile Include="src\ECS\EntityManager.cpp" />
+    <ClCompile Include="src\ECS\System.cpp" />
+    <ClCompile Include="src\ECS\SystemManager.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MapConstructor.cpp" />
+    <ClCompile Include="src\SDLEventHandler.cpp" />
+    <ClCompile Include="src\Systems\CameraSystem.cpp" />
+    <ClCompile Include="src\Systems\CollisionSystem.cpp" />
+    <ClCompile Include="src\Systems\DistanceLimitSystem.cpp" />
+    <ClCompile Include="src\Systems\EnemyMovementSystem.cpp" />
+    <ClCompile Include="src\Systems\EnemySpawnSystem.cpp" />
+    <ClCompile Include="src\Systems\KeyboardControllerSystem.cpp" />
+    <ClCompile Include="src\Systems\LifetimeSystem.cpp" />
+    <ClCompile Include="src\Systems\MouseControllerSystem.cpp" />
+    <ClCompile Include="src\Systems\RenderSystem.cpp" />
+    <ClCompile Include="src\Systems\StoneDestroyingSystem.cpp" />
+    <ClCompile Include="src\Systems\TransformSystem.cpp" />
+    <ClCompile Include="src\utils\SDLProxy.cpp" />
+    <ClCompile Include="src\Tilemap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3rdparty\easyloggingpp\easylogging++.h" />
+    <ClInclude Include="src\Audio.h" />
+    <ClInclude Include="src\Components\AttackComponent.h" />
+    <ClInclude Include="src\Components\DistanceLimitComponent.h" />
+    <ClInclude Include="src\Components\LifetimeComponent.h" />
+    <ClInclude Include="src\Components\NoiseComponent.h" />
+    <ClInclude Include="src\ECS\Component.h" />
+    <ClInclude Include="src\AssetManager.h" />
+    <ClInclude Include="src\Display.h" />
+    <ClInclude Include="src\Components\ColliderComponent.h" />
+    <ClInclude Include="src\ECS\Entity.h" />
+    <ClInclude Include="src\ECS\EntityManager.h" />
+    <ClInclude Include="src\ECS\System.h" />
+    <ClInclude Include="src\ECS\SystemManager.h" />
+    <ClInclude Include="src\EntityGroups.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Components\RenderComponent.h" />
+    <ClInclude Include="src\MapConstructor.h" />
+    <ClInclude Include="src\SDLEventHandler.h" />
+    <ClInclude Include="src\Systems\CameraSystem.h" />
+    <ClInclude Include="src\Systems\CollisionSystem.h" />
+    <ClInclude Include="src\Systems\DistanceLimitSystem.h" />
+    <ClInclude Include="src\Systems\EnemyMovementSystem.h" />
+    <ClInclude Include="src\Systems\EnemySpawnSystem.h" />
+    <ClInclude Include="src\Systems\KeyboardControllerSystem.h" />
+    <ClInclude Include="src\Systems\LifetimeSystem.h" />
+    <ClInclude Include="src\Systems\MouseControllerSystem.h" />
+    <ClInclude Include="src\Systems\RenderSystem.h" />
+    <ClInclude Include="src\Systems\StoneDestroyingSystem.h" />
+    <ClInclude Include="src\Systems\TransformSystem.h" />
+    <ClInclude Include="src\Components\TransformComponent.h" />
+    <ClInclude Include="src\utils\Rectangle.h" />
+    <ClInclude Include="src\utils\SDLProxy.h" />
+    <ClInclude Include="src\utils\Singleton.h" />
+    <ClInclude Include="src\utils\Vector2D.h" />
+    <ClInclude Include="src\Tilemap.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
